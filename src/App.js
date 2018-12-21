@@ -1,28 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import HexInput from './components/HexInput';
+import hexToHsl from 'hex-to-hsl';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+function App() {
+  const [hexCode, setHexcode] = useState('');
+  const hsl = hexToHsl(hexCode);
+  console.log(hsl);
+  return (
+    <div className="App">
+      <HexInput hexCode={hexCode} setHexcode={setHexcode}/>
+      <p>hue: {hsl[0]} saturation: {hsl[1]} lightness: {hsl[2]}</p>
+    </div>
+  );
 }
 
 export default App;

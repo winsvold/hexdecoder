@@ -1,0 +1,29 @@
+.Input__field:focus, .Input__field:hover {
+    outline: none;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.Input__field {
+    font-size: 3rem;
+    width: 4.5em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid .2rem rgba(255, 255, 255, .2);
+    color: #CCC;
+    transition: .3s;
+}
+
+.Input__label {
+    color: #CCC;
+    margin-right: 0.5rem;
+    font-size: 4rem;
+    margin-bottom: 0.2rem;
+}
+
+.Input__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
