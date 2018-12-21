@@ -1,0 +1,31 @@
+
+.BarChart {
+    margin-left:auto;
+    margin-right: auto;
+    height: 10rem;
+    width: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+    grid-column-gap: 5px;
+}
+
+[id^="Bar-"] {
+    grid-row-end: 101;
+    border-radius: 5px 5px 0 0;
+}
+
+#Bar-r {
+    grid-row-start: 1;
+    background-color: #f00;
+}
+
+#Bar-g {
+    grid-row-start: 1;
+    background-color: #0f0;
+}
+
+#Bar-b {
+    grid-row-start: 1;
+    background-color: #00f;
+}
