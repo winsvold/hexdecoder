@@ -1,0 +1,142 @@
+.hslwheel {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30em;
+    width: 30em;
+}
+
+.hslwheel .needle {
+    height: 4em;
+    width: 16em;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.hslwheel > li {
+    position: absolute;
+    height: 5.5em;
+    width: 5.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+:root {
+    --offset: 12em;
+}
+
+.hslwheel .red {
+    background-color: #F00;
+    transform: rotate(-90deg) translateX(var(--offset));
+}
+
+.hslwheel .red span {
+    transform: rotate(90deg);
+}
+
+.hslwheel .orange {
+    background-color: #F80;
+    transform: rotate(-60deg) translateX(var(--offset));
+}
+
+.hslwheel .orange span {
+    transform: rotate(60deg);
+}
+
+.hslwheel .yellow {
+    background-color: #FF0;
+    transform: rotate(-30deg) translateX(var(--offset));
+}
+
+.hslwheel .yellow span {
+    transform: rotate(30deg);
+}
+
+.hslwheel .chartreuse {
+    background-color: #FF0;
+    transform: rotate(-0deg) translateX(var(--offset));
+}
+
+.hslwheel .chartreuse span {
+    transform: rotate(0deg);
+}
+
+.hslwheel .green {
+    background-color: #0F0;
+    transform: rotate(-330deg) translateX(var(--offset));
+}
+
+.hslwheel .green span {
+    transform: rotate(330deg);
+}
+
+.hslwheel .springgreen {
+    background-color: #0F8;
+    transform: rotate(-300deg) translateX(var(--offset));
+}
+
+.hslwheel .springgreen span {
+    transform: rotate(300deg);
+}
+
+.hslwheel .cyan {
+    background-color: #0FF;
+    transform: rotate(-270deg) translateX(var(--offset));
+}
+
+.hslwheel .cyan span {
+    transform: rotate(270deg);
+}
+
+.hslwheel .azure {
+    background-color: #08F;
+    transform: rotate(-240deg) translateX(var(--offset));
+}
+
+.hslwheel .azure span {
+    transform: rotate(240deg);
+}
+
+.hslwheel .blue {
+    background-color: #00F;
+    transform: rotate(-210deg) translateX(var(--offset));
+}
+
+.hslwheel .blue span {
+    transform: rotate(210deg);
+}
+
+.hslwheel .purple {
+    background-color: #80F;
+    transform: rotate(-180deg) translateX(var(--offset));
+}
+
+.hslwheel .purple span {
+    transform: rotate(180deg);
+}
+
+.hslwheel .magenta {
+    background-color: #F0F;
+    transform: rotate(-150deg) translateX(var(--offset));
+}
+
+.hslwheel .magenta span {
+    transform: rotate(150deg);
+}
+
+.hslwheel .rose {
+    background-color: #F08;
+    transform: rotate(-120deg) translateX(var(--offset));
+}
+
+.hslwheel .rose span {
+    transform: rotate(120deg);
+}

@@ -1,6 +1,7 @@
 .Input__field:focus, .Input__field:hover {
     outline: none;
     background-color: rgba(255, 255, 255, .2);
+    border-bottom-width: .4rem;
 }
 
 .Input__field {
