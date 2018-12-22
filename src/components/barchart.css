@@ -1,11 +1,11 @@
 
 .BarChart {
-    background-color:grey;
+    background-color: darkslategrey;
     border-radius: 5px;
     margin-left:auto;
     margin-right: auto;
-    height: 10rem;
-    width: 7rem;
+    height: 20rem;
+    width: 15rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(100, 1fr);

@@ -6,5 +6,14 @@
 }
 
 .App > * {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.oneline {
+    display: flex;
+    align-items: center;
+}
+
+.oneline > *:not(:first-child) {
+    margin-left: 2rem;
 }

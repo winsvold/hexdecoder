@@ -19,11 +19,13 @@ function App() {
                 <p>hue: {hsl[0]} saturation: {hsl[1]} lightness: {hsl[2]}</p>
                 <p>shorthand: #{shorthand}</p>
             </div>
-            <BarChart rgb={rgb}/>
-            <HSLWheel hexCode={hexCode}/>
+            <div class="oneline">
+                <BarChart rgb={rgb}/>
+                <HSLWheel hexCode={hexCode}/>
+            </div>
             <LightnessAndSaturation hsl={hsl} setHexcode={setHexcode}/>
         </div>
-     );
+    );
 }
 
 export default App;
