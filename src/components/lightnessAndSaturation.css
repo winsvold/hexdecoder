@@ -1,4 +1,11 @@
-.Lightness{
+.LightnessAndSaturation{
+    display:flex;
+
+
+    flex-direction: column;
+}
+
+.Lightness, .Saturation {
     display:flex;
     justify-content: center;
     align-items: center;

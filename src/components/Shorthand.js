@@ -1,5 +1,5 @@
 import React from 'react';
-import './lightness.css';
+import './lightnessAndSaturation.css';
 
 
 export default function getShorthand(hex) {

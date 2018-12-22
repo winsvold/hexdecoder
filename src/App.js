@@ -2,16 +2,15 @@ import React, {useState} from 'react';
 import './App.css';
 import HexInput from './components/HexInput';
 import BarChart from './components/BarChart';
-import hexToHsl from 'hex-to-hsl';
-import hexToRgb from 'hex-to-rgb';
+import convert from 'color-convert';
 import HSLWheel from "./components/HSLWheel";
-import Lightness from "./components/Lightness";
+import LightnessAndSaturation from "./components/LightnessAndSaturation";
 import getShorthand from "./components/Shorthand";
 
 function App() {
     const [hexCode, setHexcode] = useState('');
-    const hsl = hexToHsl(hexCode);
-    const rgb = hexToRgb(hexCode);
+    const hsl = convert.hex.hsl(hexCode);
+    const rgb = convert.hex.rgb(hexCode);
     const shorthand = getShorthand(hexCode);
     return (
         <div className="App">
@@ -22,7 +21,7 @@ function App() {
             </div>
             <BarChart rgb={rgb}/>
             <HSLWheel hexCode={hexCode}/>
-            <Lightness hsl={hsl} setHexcode={setHexcode}/>
+            <LightnessAndSaturation hsl={hsl} setHexcode={setHexcode}/>
         </div>
      );
 }

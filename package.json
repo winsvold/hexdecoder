@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "hex-to-hsl": "^1.0.2",
-    "hex-to-rgb": "^1.0.1",
-    "hsl-to-hex": "^1.0.0",
+    "color-convert": "^1.9.3",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.1.1"
