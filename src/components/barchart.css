@@ -1,5 +1,7 @@
 
 .BarChart {
+    background-color:grey;
+    border-radius: 5px;
     margin-left:auto;
     margin-right: auto;
     height: 10rem;

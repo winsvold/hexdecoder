@@ -17,7 +17,6 @@ class BarChart extends React.Component {
         const g  = this.calculateBarValue(this.props.rgb[1]);
         const b  = this.calculateBarValue(this.props.rgb[2]);
 
-        console.log(r,g,b);
         if(BarR) {
             BarR.style.setProperty('grid-row-start', r)
         }
