@@ -10,13 +10,15 @@ function LightnessAndSaturation(props) {
     let hslString = "hsl("+ hue + "," + saturation + "%," + lightness + "%)";
 
     const onChangeLightness = event => {
+        props.setHsl([hue, saturation, event.target.value]);
         const hex = convert.hsl.hex(hue, saturation, event.target.value);
-        props.setHexcode(hex);
+        props.setHex(hex);
     };
 
     const onChangeSaturation = event => {
-        const hex = convert.hsl.hex(hue, event.target.value, lightness);
-        props.setHexcode(hex);
+        const hex = convert.hsl.hex(hue, saturation, event.target.value);
+        props.setHex(hex);
+        props.setHsl([hue, event.target.value, lightness]);
     };
 
     return (

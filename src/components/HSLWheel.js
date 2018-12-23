@@ -1,9 +1,9 @@
 import React from 'react';
 import './hslwheel.css';
-import hexToHsl from "hex-to-hsl";
+
 
 function HSLWheel(props) {
-  const hue = hexToHsl(props.hexCode)[0];
+  const hue = props.hsl[0];
   const needlestyle = {
     transform: `rotate(${hue - 90}deg) translateX(6em) `
   };
