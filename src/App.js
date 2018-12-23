@@ -21,7 +21,7 @@ function App() {
             </div>
             <div className="oneline">
                 <BarChart rgb={rgb}/>
-                <HSLWheel hsl={hsl} setHsl={setHsl}/>
+                <HSLWheel hsl={hsl} setHsl={setHsl} setHex={setHex}/>
             </div>
             <LightnessAndSaturation hsl={hsl} setHex={setHex}  setHsl={setHsl}/>
         </div>

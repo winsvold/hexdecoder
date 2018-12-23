@@ -1,15 +1,11 @@
 .LightnessAndSaturation{
-    display:flex;
-
-
-    flex-direction: column;
-}
-
-.Lightness, .Saturation {
-    display:flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 80px 160px 100px 80px;
+    grid-gap: 10px;
     align-items: center;
+    justify-items: start;
 }
+
 
 .slider {
     margin: 0 1.5rem;
