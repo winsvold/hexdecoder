@@ -18,16 +18,23 @@
 }
 
 #Bar-r {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
     grid-row-start: 1;
     background-color: #f00;
 }
 
 #Bar-g {
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
     background-color: #0f0;
 }
 
 #Bar-b {
     grid-row-start: 1;
+    grid-column-start: 3;
+    grid-column-end: 4;
     background-color: #00f;
 }
