@@ -8,22 +8,23 @@ import LightnessAndSaturation from "./components/LightnessAndSaturation";
 import getShorthand from "./components/Shorthand";
 
 function App() {
-    const [hexCode, setHexcode] = useState('');
-    const hsl = convert.hex.hsl(hexCode);
-    const rgb = convert.hex.rgb(hexCode);
-    const shorthand = getShorthand(hexCode);
+    const [hsl, setHsl] = useState([0, 0, 0]);
+    const hex = convert.hsl.hex(hsl);
+    const rgb = convert.hsl.rgb(hsl);
+    const shorthand = getShorthand(hex);
+    const setHex = h => setHsl(convert.hex.hsl(h));
     return (
         <div className="App">
-            <HexInput hexCode={hexCode} setHexcode={setHexcode}/>
+            <HexInput hexCode={hex} setHexcode={setHex}/>
             <div>
                 <p>hue: {hsl[0]} saturation: {hsl[1]} lightness: {hsl[2]}</p>
                 <p>shorthand: #{shorthand}</p>
             </div>
             <div class="oneline">
                 <BarChart rgb={rgb}/>
-                <HSLWheel hexCode={hexCode}/>
+                <HSLWheel hsl={hsl} setHsl={setHsl}/>
             </div>
-            <LightnessAndSaturation hsl={hsl} setHexcode={setHexcode}/>
+            <LightnessAndSaturation hsl={hsl} setHsl={setHsl}/>
         </div>
     );
 }

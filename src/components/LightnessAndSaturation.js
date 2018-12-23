@@ -1,6 +1,5 @@
 import React from 'react';
 import './lightnessAndSaturation.css';
-import convert from 'color-convert';
 
 
 function LightnessAndSaturation(props) {
@@ -10,13 +9,13 @@ function LightnessAndSaturation(props) {
     let hslString = "hsl("+ hue + "," + saturation + "%," + lightness + "%)";
 
     const onChangeLightness = event => {
-        const hex = convert.hsl.hex(hue, saturation, event.target.value);
-        props.setHexcode(hex);
+        const hsl = [hue, saturation, event.target.value];
+        props.setHsl(hsl);
     };
 
     const onChangeSaturation = event => {
-        const hex = convert.hsl.hex(hue, event.target.value, lightness);
-        props.setHexcode(hex);
+        const hsl = [hue, event.target.value, lightness];
+        props.setHsl(hsl);
     };
 
     return (

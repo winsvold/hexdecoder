@@ -18,6 +18,16 @@
     transition: .3s ;
 }
 
+.hslwheel > li:hover {
+    box-shadow: inset 0 0 2em black;
+    cursor: pointer;
+}
+
+.hslwheel > li:active {
+    box-shadow: inset 0 0 2em white;
+    cursor: pointer;
+}
+
 .hslwheel > li {
     position: absolute;
     height: 5.5em;
