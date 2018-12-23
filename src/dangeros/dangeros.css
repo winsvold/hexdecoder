@@ -1,0 +1,7 @@
+.Modal__button{
+    margin: 1rem auto;
+    border: 1px solid red;
+    background-color: #ffa490;
+    border-radius: 4px;
+    padding: 0.5rem;
+}

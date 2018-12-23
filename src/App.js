@@ -6,6 +6,7 @@ import convert from 'color-convert';
 import HSLWheel from "./components/HSLWheel";
 import LightnessAndSaturation from "./components/LightnessAndSaturation";
 import getShorthand from "./components/Shorthand";
+import Dangeros from "./dangeros/Dangeros";
 
 function App() {
     const [hsl, setHsl] = useState([0,0,0]);
@@ -14,6 +15,7 @@ function App() {
     const shorthand = getShorthand(hex);
     return (
         <div className="App">
+            <Dangeros hex={hex}/>
             <HexInput hex={hex} setHex={setHex} setHsl={setHsl}/>
             <div>
                 <p>hue: {hsl[0]} saturation: {hsl[1]} lightness: {hsl[2]}</p>
