@@ -1,11 +1,9 @@
 
 .BarChart {
     background-color: darkslategrey;
-    border-radius: 5px;
-    margin-left:auto;
-    margin-right: auto;
-    height: 20rem;
-    width: 15rem;
+    border-radius: 2em 2em 0 0;
+    height: calc(18vw + 8em);
+    width: calc(14vw + 6em);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(100, 1fr);
@@ -14,7 +12,7 @@
 
 [id^="Bar-"] {
     grid-row-end: 101;
-    border-radius: 5px 5px 0 0;
+    border-radius: 2em 2em 0 0;
 }
 
 #Bar-r {

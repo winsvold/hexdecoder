@@ -9,17 +9,19 @@ import getShorthand from "./components/Shorthand";
 import Dangeros from "./dangeros/Dangeros";
 
 function App() {
-    const [hsl, setHsl] = useState([0,0,0]);
+    const [hsl, setHsl] = useState([0,50,50]);
     const [hex, setHex] = useState('');
     const rgb = convert.hsl.rgb(hsl);
     const shorthand = getShorthand(hex);
     return (
         <div className="App">
             <Dangeros hex={hex}/>
+            <div className="oneline">
             <HexInput hex={hex} setHex={setHex} setHsl={setHsl}/>
             <div>
                 <p>hue: {hsl[0]} saturation: {hsl[1]} lightness: {hsl[2]}</p>
                 <p>shorthand: #{shorthand}</p>
+            </div>
             </div>
             <div className="oneline">
                 <BarChart rgb={rgb}/>

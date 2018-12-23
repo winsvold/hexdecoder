@@ -19,7 +19,7 @@ function HSLWheel(props) {
       <li className="red" onClick={setHue(0)}><span>Red</span></li>
       <li className="orange" onClick={setHue(30)}><span>Orange</span></li>
       <li className="yellow" onClick={setHue(60)}><span>Yellow</span></li>
-      <li className="chartreuse" onClick={setHue(90)}><span>Chartreuse</span></li>
+      <li className="chartreuse" onClick={setHue(90)}><span>Chart-reuse</span></li>
       <li className="green" onClick={setHue(120)}><span>Green</span></li>
       <li className="springgreen" onClick={setHue(150)}><span>Spring Green</span></li>
       <li className="cyan" onClick={setHue(180)}><span>Cyan</span></li>
