@@ -2,16 +2,15 @@ import React from 'react';
 import './hslwheel.css';
 import convert from 'color-convert';
 
-
 function HSLWheel(props) {
   const hue = props.hsl[0];
   const needlestyle = {
     transform: `rotate(${hue - 90}deg) translateX(6em) `
   };
   const setHue = h => () => {
-      props.setHsl([h, props.hsl[1], props.hsl[2]]);
-      console.log(props.hsl, convert.hsl.hex(60,0, 0));
-      props.setHex(convert.hsl.hex(props.hsl[0], props.hsl[1], props.hsl[2]));
+      const hsl = [h, props.hsl[1], props.hsl[2]];
+      props.setHsl(hsl);
+      props.setHex(convert.hsl.hex(hsl));
   };
   return (
     <ul className="hslwheel">

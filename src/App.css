@@ -6,7 +6,7 @@
 }
 
 .App > * {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 .oneline {
@@ -17,5 +17,5 @@
 }
 
 .oneline > * {
-    margin: 1em;
+    margin: .5em;
 }

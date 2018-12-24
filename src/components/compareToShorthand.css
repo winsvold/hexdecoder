@@ -1,0 +1,16 @@
+.compareShorthand {
+    display: flex;
+    box-shadow: 0 0 2em rgba(255, 255, 255, .02);
+}
+
+.compareShorthand > div {
+    font-size: 4vw;
+    width: 50vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbb;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .3);
+}
