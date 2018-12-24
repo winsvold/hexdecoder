@@ -6,7 +6,9 @@ function Inputfelt(props) {
 
     const onchange = event => {
         const input = event.target.value.slice(0, 6).replace(/[^0-9A-Fa-f]+/, '')
-        props.setHsl(convert.hex.hsl(input));
+        if (input.length === 6 || input.length === 3) {
+            props.setHsl(convert.hex.hsl(input));
+        }
         props.setHex(input);
     };
     return (

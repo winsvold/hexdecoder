@@ -16,28 +16,32 @@ function LightnessAndSaturation(props) {
     };
 
     const onChangeSaturation = event => {
-        const hex = convert.hsl.hex(hue, saturation, event.target.value);
+        const hex = convert.hsl.hex(hue, event.target.value, lightness);
         props.setHex(hex);
         props.setHsl([hue, event.target.value, lightness]);
     };
 
     const getLightnessText= () => {
-        if (lightness < 33.33 ){
+        if (lightness < 5 ){
+            return 'Black';
+        } else if (lightness < 33.33 ){
             return 'Dark';
         } else if (lightness < 66.66 ){
             return 'Middle';
-        }  else {
+        } else if (lightness < 98 ){
             return 'Light';
+        }  else {
+            return 'White';
         }
     };
 
 
     const getSaturationText= () => {
-        if (saturation < 25 ){
+        if (saturation < 10 ){
             return 'Grey';
-        } else if (saturation < 50 ){
+        } else if (saturation < 40 ){
             return 'Muted';
-        }  else if (saturation < 75 ){
+        }  else if (saturation < 70 ){
             return 'Washed';
         }  else {
             return 'Saturated';
