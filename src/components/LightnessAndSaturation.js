@@ -50,30 +50,32 @@ function LightnessAndSaturation(props) {
 
     return (
         <div className="LightnessAndSaturation">
-            <span>Lightness: </span>
+            <span id="L__header">Lightness: </span>
             <input
+                id="L__slider"
                 type="range"
                 min="0" max="100"
                 value={props.hsl[2]}
                 onChange={onChangeLightness}
                 step="1"
                 className="slider"/>
-            <svg height="60" width="60">
+            <svg height="60" width="60" id="L__circle">
                 <circle cx="30" cy="30" r="30" fill={hslString}/>
             </svg>
-            <div>{getLightnessText()}</div>
-            <span>Saturation: </span>
+            <div id="L__text">{getLightnessText()}</div>
+            <span id="S__header">Saturation: </span>
             <input
+                id="S__slider"
                 type="range"
                 min="0" max="100"
                 value={props.hsl[1]}
                 onChange={onChangeSaturation}
                 step="1"
                 className="slider"/>
-            <svg height="60" width="60">
+            <svg height="60" width="60" id="S__circle">
                 <circle cx="30" cy="30" r="30" fill={hslString}/>
             </svg>
-            <div>{getSaturationText()}</div>
+            <div id="S__text">{getSaturationText()}</div>
         </div>
     );
 }
