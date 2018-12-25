@@ -17,7 +17,7 @@ function App() {
     return (
         <div className="App">
             <Dangeros hex={hex}/>
-            <CompareToShothand hex={hex} shorthand={shorthand}/>
+            <CompareToShothand hex={hex} shorthand={shorthand} hsl={hsl}/>
             <div className="oneline">
                 <HexInput hex={hex} setHex={setHex} setHsl={setHsl}/>
                 <div>
